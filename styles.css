@@ -73,6 +73,7 @@ nav ul li a:hover {
 
 .overview-hero .container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
@@ -80,10 +81,22 @@ nav ul li a:hover {
 
 .overview-hero-image img {
     border-radius: 5px;
+    max-width: 100%;
 }
 
 .overview-hero-text {
     flex: 1;
+    text-align: left;
+}
+
+/* Make hero text horizontal */
+.overview-hero-text h2,
+.overview-hero-text p {
+    writing-mode: horizontal-tb; /* ensure horizontal layout */
+    text-orientation: mixed;
+    transform: none;
+    display: block;
+    white-space: normal;
 }
 
 .overview-hero-text h2 {
@@ -94,11 +107,6 @@ nav ul li a:hover {
 .overview-hero-text p {
     font-size: 16px;
     line-height: 1.6;
-    writing-mode: horizontal-tb; /* horizontal text */
-    text-orientation: mixed;      /* standard orientation */
-    white-space: normal;          /* normal wrapping */
-    transform: none;              /* remove any rotation */
-    margin: 0;                    /* reset default margins */
 }
 
 /* == Learn About Section == */
@@ -149,7 +157,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 60px 0;
-    margin-bottom: 0; /* remove extra space below section */
+    margin-bottom: 0;
 }
 
 .testing .container {
@@ -189,7 +197,7 @@ nav ul li a:hover {
 /* == Recent Stories Section == */
 .stories {
     padding: 40px 0;
-    margin-bottom: 0; /* remove extra space below section */
+    margin-bottom: 0;
 }
 
 .stories h2 {
@@ -241,7 +249,7 @@ nav ul li a:hover {
     background-color: #48BB78;
     color: white;
     text-align: center;
-    padding: 50px 20px 0 20px; /* top padding only */
+    padding: 50px 20px 0 20px;
     margin: 0;
 }
 
@@ -294,7 +302,7 @@ footer {
     background-color: #4A5568;
     color: white;
     text-align: center;
-    padding: 10px 0; /* small padding for footer */
+    padding: 10px 0;
     margin: 0;
 }
 
