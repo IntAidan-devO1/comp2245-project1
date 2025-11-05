@@ -72,25 +72,25 @@ nav ul li a:hover {
 
 .overview-hero .container {
     display: flex;
-    align-items: center;         /* vertically align text + image */
-    justify-content: center;     /* center content horizontally */
-    gap: 40px;                   /* space between image and text */
-    flex-wrap: wrap;             /* allow wrapping on smaller screens */
+    align-items: center;         
+    justify-content: center;     
+    gap: 40px;                   
+    flex-wrap: wrap;             
 }
 
 .overview-hero-image {
-    flex: 1 1 300px;             /* image can shrink but min width 300px */
-    max-width: 400px;            /* limits image size on large screens */
+    flex: 1 1 300px;            
+    max-width: 400px;            
 }
 
 .overview-hero-image img {
-    width: 100%;                 /* image fills container */
+    width: 100%;                 
     border-radius: 5px;
 }
 
 .overview-hero-text {
-    flex: 1 1 300px;             /* text takes remaining space */
-    text-align: left;            /* left-align text for readability */
+    flex: 1 1 300px;             
+    text-align: left;          
 }
 
 .overview-hero-text h2 {
