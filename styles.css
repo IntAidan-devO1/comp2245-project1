@@ -67,36 +67,30 @@ nav ul li a:hover {
 /* == Hero Overview Section == */
 .overview-hero {
     background-color: #E2E8F0;
-    padding: 60px 0;
-    text-align: center;
+    padding: 60px 20px;
 }
 
 .overview-hero .container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    align-items: center;         /* vertically align text + image */
+    justify-content: center;     /* center content horizontally */
+    gap: 40px;                   /* space between image and text */
+    flex-wrap: wrap;             /* allow wrapping on smaller screens */
+}
+
+.overview-hero-image {
+    flex: 1 1 300px;             /* image can shrink but min width 300px */
+    max-width: 400px;            /* limits image size on large screens */
 }
 
 .overview-hero-image img {
+    width: 100%;                 /* image fills container */
     border-radius: 5px;
-    max-width: 100%;
 }
 
 .overview-hero-text {
-    flex: 1;
-    text-align: left;
-}
-
-/* Make hero text horizontal */
-.overview-hero-text h2,
-.overview-hero-text p {
-    writing-mode: horizontal-tb; /* ensure horizontal layout */
-    text-orientation: mixed;
-    transform: none;
-    display: block;
-    white-space: normal;
+    flex: 1 1 300px;             /* text takes remaining space */
+    text-align: left;            /* left-align text for readability */
 }
 
 .overview-hero-text h2 {
@@ -108,6 +102,7 @@ nav ul li a:hover {
     font-size: 16px;
     line-height: 1.6;
 }
+
 
 /* == Learn About Section == */
 .learn-about {
