@@ -1,6 +1,4 @@
-/* ===========================
-   Base / Global Styles
-=========================== */
+/* == Base / Global Styles == */
 body {
     margin: 0;
     padding: 0;
@@ -27,9 +25,7 @@ h1, h2, h3, p {
     margin-bottom: 15px;
 }
 
-/* ===========================
-   Header & Navigation
-=========================== */
+/* == Header & Navigation == */
 header {
     background-color: white;
     padding: 15px 0;
@@ -68,9 +64,7 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* ===========================
-   Hero Overview Section
-=========================== */
+/* == Hero Overview Section == */
 .overview-hero {
     background-color: #E2E8F0;
     padding: 60px 0;
@@ -102,9 +96,7 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* ===========================
-   Learn About Section
-=========================== */
+/* == Learn About Section == */
 .learn-about {
     padding: 40px 0;
 }
@@ -146,9 +138,7 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* ===========================
-   COVID-19 Testing Section
-=========================== */
+/* == COVID-19 Testing Section == */
 .testing {
     background-color: #4A5568;
     color: white;
@@ -191,9 +181,7 @@ nav ul li a:hover {
     background-color: #38A169;
 }
 
-/* ===========================
-   Recent Stories Section 
-=========================== */
+/* == Recent Stories Section == */
 .stories {
     padding: 40px 0;
     margin-bottom: 0; /* remove extra space below section */
@@ -243,9 +231,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* ===========================
-   Newsletter Section
-=========================== */
+/* == Newsletter Section == */
 .newsletter {
     background-color: #48BB78;
     color: white;
@@ -298,9 +284,7 @@ nav ul li a:hover {
     background-color: #434190;
 }
 
-/* ===========================
-   Footer Section
-=========================== */
+/* == Footer Section == */
 footer {
     background-color: #4A5568;
     color: white;
