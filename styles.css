@@ -1,6 +1,10 @@
-/* Add your CSS to this file */
+/* ===========================
+   Base / Global Styles
+=========================== */
 body {
     margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
     font-size: 16px;
 }
 
@@ -8,33 +12,28 @@ body {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    padding: 0 20px; /* breathing room inside sections */
 }
 
-/* == Header == */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reset heading & paragraph spacing */
+h1, h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   Header & Navigation
+=========================== */
 header {
     background-color: white;
     padding: 15px 0;
-}
-
-/* Navigation menu styles */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #6b7280;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    color: #111827;
-    transform: scale(1.1);
+    font-size: 18px;
 }
 
 header .container {
@@ -48,38 +47,49 @@ header h1 {
     margin: 0;
 }
 
-header nav ul li a {
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
     text-decoration: none;
     color: #6b7280;
+    font-weight: 500;
     font-size: 18px;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     color: #5A67D8;
+    transform: scale(1.1);
 }
 
-/* == Hero Overview Section == */
+/* ===========================
+   Hero Overview Section
+=========================== */
 .overview-hero {
     background-color: #E2E8F0;
-    padding: 50px 0;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .overview-hero .container {
     display: flex;
-    align-items: center; /* vertically align image + text */
-    justify-content: space-between; /* keep them apart nicely */
-    gap: 40px; /* space between image and text */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .overview-hero-image img {
-    width: 100%;
-    max-width: 400px; /* keeps image a reasonable size */
-    border-radius: 5px; /* optional, adds soft corners */
+    border-radius: 5px;
 }
 
 .overview-hero-text {
-    flex: 1; /* make text take remaining space */
+    flex: 1;
 }
 
 .overview-hero-text h2 {
@@ -92,7 +102,9 @@ header nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* == Learn About Section == */
+/* ===========================
+   Learn About Section
+=========================== */
 .learn-about {
     padding: 40px 0;
 }
@@ -120,8 +132,6 @@ header nav ul li a:hover {
 }
 
 .card img {
-    max-width: 100%;
-    height: auto;
     border-radius: 5px;
 }
 
@@ -136,11 +146,15 @@ header nav ul li a:hover {
     color: #333;
 }
 
-/* == COVID-19 Testing Programme Section == */
+/* ===========================
+   COVID-19 Testing Section
+=========================== */
 .testing {
     background-color: #4A5568;
     color: white;
-    padding: 40px 0;
+    text-align: center;
+    padding: 60px 0;
+    margin-bottom: 0; /* remove extra space below section */
 }
 
 .testing .container {
@@ -177,9 +191,12 @@ header nav ul li a:hover {
     background-color: #38A169;
 }
 
-/* == Recent Stories Section == */
+/* ===========================
+   Recent Stories Section 
+=========================== */
 .stories {
     padding: 40px 0;
+    margin-bottom: 0; /* remove extra space below section */
 }
 
 .stories h2 {
@@ -199,7 +216,7 @@ header nav ul li a:hover {
 .stories img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* makes the image circular */
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -226,12 +243,14 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* == Newsletter Section == */
+/* ===========================
+   Newsletter Section
+=========================== */
 .newsletter {
     background-color: #48BB78;
     color: white;
     text-align: center;
-    padding: 50px 20px 0 20px;
+    padding: 50px 20px 0 20px; /* top padding only */
     margin: 0;
 }
 
@@ -251,7 +270,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap; /* ensures it still looks good on small screens */
+    flex-wrap: wrap;
 }
 
 .newsletter input[type="email"] {
@@ -262,7 +281,8 @@ header nav ul li a:hover {
     max-width: 100%;
 }
 
-.newsletter .btn {
+.newsletter .btn,
+.newsletter button {
     background-color: #5A67D8;
     color: white;
     border: none;
@@ -273,168 +293,22 @@ header nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.newsletter .btn:hover {
+.newsletter .btn:hover,
+.newsletter button:hover {
     background-color: #434190;
 }
 
-/* General Spacing and Layout Tweaks */
-
-section {
-    padding: 60px 0;
-    margin: 0 auto;
-}
-
-/* Add breathing room inside containers */
-.container {
-    padding: 0 20px;
-}
-
-/* Space between text elements */
-h1, h2, h3, p {
-    margin-bottom: 15px;
-}
-
-/* Make sure images and text don’t stick to each other */
-img {
-    display: block;
-    margin: 0 auto;
-}
-
-/* Add space between major page sections */
-.overview-hero,
-.learn-about,
-.testing,
-.stories,
-.newsletter {
-    margin-bottom: 60px;
-}
-
-/* Footer spacing */
-footer {
-    padding: 0;
-    margin: 0;
-}
-
-footer p{
-    margin: 0;
-}
-
-/* === COLORS & FONTS === */
-
-/* 1. Default font and size */
-body {
-    font-family: system-ui, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-}
-
-/* 2. Header */
-header {
-    background-color: white;
-    font-size: 18px;
-    padding: 15px 0;
-}
-
-/* 3. Navigation Links */
-nav a {
-    color: #6b7280;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    color: #5A67D8;
-}
-
-/* 4. Hero Overview Section */
-.overview-hero {
-    background-color: #E2E8F0;
-    padding: 60px 0;
-    text-align: center;
-}
-
-/* 5. Learn About Section Heading */
-.learn-about h2 {
-    font-size: 24px;
-    color: #48BB78;
-}
-
-/* 6. Learn About Cards */
-.learn-about .card {
-    border: 1px solid #E2E8F0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: white;
-}
-
-/* 7. Learn About Card Titles */
-.learn-about .card h3 {
-    font-size: 21px;
-    color: #48BB78;
-}
-
-/* 8. COVID-19 Testing Section */
-.testing {
-    background-color: #4A5568;
-    color: white;
-    text-align: center;
-    padding: 60px 0;
-}
-
-.testing a {
-    background-color: #48BB78;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.testing a:hover {
-    background-color: #3da46b;
-}
-
-/* 9. Recent Stories Section */
-.stories h2,
-.stories a {
-    color: #5A67D8;
-}
-
-.stories .story-title {
-    font-size: 18px;
-}
-
-/* 10. Make story images circular */
-.stories img {
-    border-radius: 50%;
-}
-
-/* 11. Newsletter Section */
-.newsletter {
-    background-color: #48BB78;
-    color: white;
-    text-align: center;
-    padding: 60px 0;
-}
-
-.newsletter button {
-    background-color: #5A67D8;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.newsletter button:hover {
-    background-color: #4a56c8;
-}
-
-/* 12. Footer Section */
+/* ===========================
+   Footer Section
+=========================== */
 footer {
     background-color: #4A5568;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0; /* small padding for footer */
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
 }
