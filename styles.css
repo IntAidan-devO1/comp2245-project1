@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
-    padding: 0 20px; /* breathing room inside sections */
+    padding: 0 20px; 
 }
 
 img {
@@ -94,6 +94,11 @@ nav ul li a:hover {
 .overview-hero-text p {
     font-size: 16px;
     line-height: 1.6;
+    writing-mode: horizontal-tb; /* horizontal text */
+    text-orientation: mixed;      /* standard orientation */
+    white-space: normal;          /* normal wrapping */
+    transform: none;              /* remove any rotation */
+    margin: 0;                    /* reset default margins */
 }
 
 /* == Learn About Section == */
